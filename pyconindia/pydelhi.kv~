@@ -455,12 +455,6 @@
     BoxLayout
         padding: dp(12)
         orientation: 'vertical'
-        canvas.before:
-            Color: 
-                rgba: 1, 1, 1, 1
-            Rectangle:
-                size: self.size
-                pos: self.pos
         ScrollView
             spacing: dp(4)
             LeftAlignedLabel:
