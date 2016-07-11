@@ -3,9 +3,6 @@
 #:import Factory kivy.factory.Factory
 #:import NavigationDrawer uix.navigationdrawer.NavigationDrawer
 #:set active_text_color 59./256., 205./256., 155./256., 1
-#:set background_color 62./256., 70./256., 81./256., 1
-
-
 
 <GridH@GridLayout>
     cols: 1
@@ -83,7 +80,7 @@
         ed.open()
     canvas.before:
         Color:
-            rgba: 39./256., 115./256., 90./256., .3
+            rgba: 250./256 , 250./256 , 250./256, 1
         Rectangle:
             pos: self.pos
             size: self.size
@@ -92,11 +89,12 @@
         text: '[color=rgb(255,244,139)]{}[/color]'.format(root.time)
         font_size: sp(10)
     LeftAlignedLabel:
-        text: root.title
+        markup: True
+        text: '[color=rgb(1,1,1)]{}[/color]'.format(root.spkr_detail)
         font_size: sp(14)
     LeftAlignedLabel:
         markup: True
-        text: '[color=rgb(255,244,139)]{}[/color]'.format(root.spkr_detail)
+        text: '[color=rgb(1,1,1)]{}[/color]'.format(root.spkr_detail)
         font_size: sp(11)
 
 
@@ -111,7 +109,6 @@
 <ScreenSchedule@Screen>
     TabbedCarousel
         id: panel_schedule
-        background_image: 'atlas://data/default/ig'
         Screen
             tab: tab_audi_3
             ScrollView
@@ -336,7 +333,13 @@
         id: stencil_maps
         BoxLayout:
             size: stencil_maps.size
-            pos: 0, 0
+            pos: 0, 0 
+            canvas.before:
+                Color: 
+                    rgba: 1, 1, 1, 1
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
             orientation: 'vertical'
             Image:
                 allow_stretch: True
@@ -373,12 +376,20 @@
                 webbrowser.open('http://www.google.co.in/maps/@28.53792,77.1662708,3a,75y,314.71h,71.28t/data=!3m6!1e1!3m4!1sk22VqhFqAcHHxi_gm9_M1w!2e0!7i13312!8i6656?hl=en')
 
 <ScreenSponsors@Screen>
+
     id: tab_sponsors
     text: 'Sponsors'
     BoxLayout
         padding: dp(12)
         orientation: 'vertical'
         spacing: dp(4)
+        canvas.before:
+            Color: 
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        
         Image
             source: 'atlas://data/default/fossee'
             allow_stretch: True
@@ -414,6 +425,12 @@
         padding: dp(12)
         orientation: 'vertical'
         spacing:dp(5)
+        canvas.before:
+            Color: 
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
         Image:
             source: 'atlas://data/default/ticket'
             allow_stretch: True
@@ -430,7 +447,7 @@
             size_hint_y: None
             height: dp(54)
             on_release:
-                webbrowser.open('http://in.explara.com/e/pydelhi-conference/')
+                webbrowser.open('https://in.explara.com/e/pycon-india-2016')
 
 <ScreenAbout@Screen>
     id: tab_maps
@@ -438,6 +455,12 @@
     BoxLayout
         padding: dp(12)
         orientation: 'vertical'
+        canvas.before:
+            Color: 
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
         ScrollView
             spacing: dp(4)
             LeftAlignedLabel:
@@ -489,9 +512,8 @@
     always_release: True
 
 <NavigationItem@TouchRippleBehavior+Button>
-    background_color: background_color if self.state == 'normal' else (1, 1, 1, 1)
+    background_color: 217./256., 52./256., 47./256., 1
     background_normal: ''
-    background_down: 'atlas://data/default/but_overlay'
     size_hint_y: None
     height: dp(45)
     on_release:
@@ -506,7 +528,7 @@ NavigationDrawer
     ScrollView
         canvas.before:
             Color:
-                rgba: 47./255, 47./255., 47./255., 1
+                rgba: 61./256., 61./256., 61./256., 1
             Rectangle:
                 size: self.size
                 pos: self.pos
@@ -534,7 +556,7 @@ NavigationDrawer
         screen_manager: screen_manager
         canvas.before:
             Color:
-                rgba: background_color 
+                rgba: 217./256., 52./256., 47./256., 1
             Rectangle:
                 size: self.size
                 pos: self.pos
