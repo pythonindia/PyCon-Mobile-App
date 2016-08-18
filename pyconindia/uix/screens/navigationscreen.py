@@ -70,6 +70,9 @@ class NavigationScreen(Screen):
                 text: 'Pong'
                 on_release: app.load_screen('ScreenPong', manager=app.navigation_manager)
             MenuButton
+                text: 'Map'
+                on_release: app.load_screen('ScreenMap', manager=app.navigation_manager)
+            MenuButton
                 text: 'About'
             MenuButton
                 text: 'Exit'
