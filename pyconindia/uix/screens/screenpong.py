@@ -6,11 +6,12 @@ from kivy.vector import Vector
 from kivy.clock import Clock
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
+from kivy.uix.image import Image
 
 
-
-class PongPaddle(Widget):
+class PongPaddle(Image):
     score = NumericProperty(0)
+
 
     def bounce_ball(self, ball):
         if self.collide_widget(ball):
@@ -21,7 +22,7 @@ class PongPaddle(Widget):
             ball.velocity = vel.x, vel.y + offset
 
 
-class PongBall(Widget):
+class PongBall(Image):
     velocity_x = NumericProperty(0)
     velocity_y = NumericProperty(0)
     velocity = ReferenceListProperty(velocity_x, velocity_y)
@@ -63,29 +64,20 @@ class PongGame(Widget):
             self.player1.center_y = touch.y
         if touch.x > self.width - self.width / 3:
             self.player2.center_y = touch.y
-
-
-
 class ScreenPong(Screen):
     game = None
 
     Builder.load_string('''
 <ScreenPong>
     name: 'ScreenPong'
-<PongBall>:
-    size: 50, 50 
-    canvas:
-        Ellipse:
-            pos: self.pos
-            size: self.size          
 
+<PongBall>:
+    size: 100, 100 
+    source:'data/images/ball.gif'
+    anim_delay:.021
 <PongPaddle>:
     size: 25, 200
-    canvas:
-        Rectangle:
-            pos:self.pos
-            size:self.size
-
+    source:''
 <PongGame>:
     ball: pong_ball
     player1: player_left
