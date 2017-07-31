@@ -1,4 +1,4 @@
-PyCon India 2016 Application
+PyCon India 2017 Application
 =======
 > Mobile App for PyConIndia
 
