@@ -1,4 +1,4 @@
-PyCon India 2016 Application 
+PyCon India 2016 Application
 =======
 > Mobile App for PyConIndia
 
@@ -11,7 +11,9 @@ PyCon India 2016 Application
 
 ### To test install kivy and run the following::
 
-    $ python pyconindia/main.py -m screen:droid2,portrait -m inspector
+Python2:  `$ python pyconindia/main.py -m screen:droid2,portrait -m inspector`
+
+Python3:  `$ python3 pyconindia/main.py -m screen:droid2,portrait -m inspector`
 
 ### Help on screens
 - https://kivy.org/docs/api-kivy.modules.screen.html
@@ -19,12 +21,12 @@ PyCon India 2016 Application
 ## To change images in app
    - Paste/change the image in PyCon-Mobile-App/tools/theming
    - Change your directory to PyCon-Mobile-App
-   - Run command ``make theming`` 
+   - Run command ``make theming``
 
 This command will aggregate all the png images in your file to one atlas
 from which the images are loaded.
 
-## to make apk **prefer linux**
+## To make apk **prefer linux**
 
 1. Install buildozer: pip install buildozer
 2. Edit the buildozer.spec to specify if you have android ndk and sdk,
@@ -34,7 +36,7 @@ from which the images are loaded.
 
 Link to a existing vm that can be re-used will be added for convenience.
 
-## to make ipa for ios **
+## To make ipa for ios **
 
 1. Install XCode with latest updates & latest command line tools
 2. pip install buildozer

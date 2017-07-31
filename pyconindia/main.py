@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
 '''
-PyDelhi App: 
+PyDelhi App:
 - Displays Schedule: static √
 - Static map: √
 - Link to open location externally √
@@ -9,7 +9,7 @@ PyDelhi App:
 - Social Media:
 	- Facebook
 	- Twitter
-- Dynamic schedule 
+- Dynamic schedule
 '''
 
 #from datetime import datetime
@@ -44,7 +44,7 @@ class PyDelhiApp(App):
         self.icon = 'data/icon.png'
 
     def on_pause(self):
-    	return True 
+    	return True
 
     def on_start(self):
     #     #Clock.schedule_interval(self.calc_time_left, 1)
@@ -62,9 +62,9 @@ class PyDelhiApp(App):
 
     def go_back_in_history(self):
         try:
-            print self.root.ids.screen_manager.current
+            print (self.root.ids.screen_manager.current)
             nc = self._navigation_higherarchy.pop()
-            print nc
+            print (nc)
         except IndexError:
             panel = self.root.ids.screen_schedule.ids.panel_schedule
             #curtab = panel.current_tab
