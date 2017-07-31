@@ -341,7 +341,7 @@
             Image:
                 allow_stretch: True
                 source: 'atlas://data/default/center'
-                on_touch_down: 
+                on_touch_down:
                     if args[1].is_double_tap: Animation(center = sctr_space.center, rotation=0, scale = 1).start(sctr_map)
             RelativeLayout:
                 id: sctr_space
@@ -513,7 +513,7 @@ NavigationDrawer
         GridH
             padding: dp(4)
             spacing: dp(4)
-            Image: 
+            Image:
                 size_hint_y: None
                 height: dp(90)
                 source: 'atlas://data/default/logo'
@@ -534,7 +534,7 @@ NavigationDrawer
         screen_manager: screen_manager
         canvas.before:
             Color:
-                rgba: background_color 
+                rgba: background_color
             Rectangle:
                 size: self.size
                 pos: self.pos
@@ -543,7 +543,7 @@ NavigationDrawer
             size_hint_y: None
             height: dp(54)
             canvas.before:
-                Color: 
+                Color:
                     rgba: 1, 1, 1, .02
                 Rectangle:
                     size: self.size
@@ -552,7 +552,7 @@ NavigationDrawer
                 id: hamburger
                 source: 'atlas://data/default/hamburger'
                 size_hint: None, 1
-                width:  self.height 
+                width:  self.height
                 on_release: navigationdrawer.toggle_state()
             ImageButton
                 allow_stretch: True
@@ -564,7 +564,7 @@ NavigationDrawer
             id: screen_manager
             on_current:
                 hc = app._navigation_higherarchy
-                print app._navigation_higherarchy, '_navigation_higherarchy', args[1]
+                print (app._navigation_higherarchy, '_navigation_higherarchy', args[1])
                 if args[1] in hc: num = hc.index(args[1]); hc.pop(num)
                 hc.append(args[1])
             ScreenSchedule
