@@ -25,6 +25,7 @@ from kivy.config import Config
 Config.set('widgets', 'scroll_distance', '13')
 from kivy.properties import StringProperty, ObjectProperty
 from kivy.factory import Factory
+from kivy.base import EventLoop
 
 Factory.register('TouchRippleBehavior', module='uix.behaviors')
 Factory.register('TabbedCarousel', module='uix.tabbedcarousel')
@@ -51,7 +52,6 @@ class PyDelhiApp(App):
     #     #self.load_local_schedule()
     #     #update_from_remote_schedule(callback=schedule_callback)
         self._navigation_higherarchy = ['Schedule']
-        from kivy.base import EventLoop
         EventLoop.window.bind(on_keyboard=self.hook_keyboard)
 
     def hook_keyboard(self, window, key, *largs):
