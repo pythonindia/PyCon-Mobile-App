@@ -10,7 +10,7 @@ package.name = conference
 package.domain = org.pydelhi
 
 # (str) Source code where the main.py live
-source.dir = ./pydelhiapp
+source.dir = ./pyconindia
 
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas
