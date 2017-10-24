@@ -49,7 +49,7 @@ class NavigationScreen(Screen):
 
 <TopBar@BoxLayout>
     size_hint: 1, None
-    height: dp(45)
+    height: dp(65)
     width: dp(45)
     spacing: dp(15)
     canvas.before:
@@ -67,6 +67,7 @@ class NavigationScreen(Screen):
         on_release: app.navigationdrawer.toggle_state()
     Label:
         text: 'PyCon India 2017'
+        font_size: dp(22)
         text_size: self.size
         halign: 'left'
         valign: 'center'
@@ -130,7 +131,7 @@ class NavigationScreen(Screen):
                 icon_source: 'data/images/menu/calendar.png'
                 on_release:
                     app.navigation_screen.ids.drawer.toggle_state()
-                    app.load_screen('AboutScreen',
+                    app.load_screen('ConferenceScheduleScreen',
                     manager=app.navigation_screen.ids.nav_manager)
             NavButton
                 button_text: 'About'

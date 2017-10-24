@@ -42,6 +42,8 @@ class WelcomeScreen(Screen):
                     spacing: dp(45)
                     BButton
                         text: 'Workshop & DevSprints'
+                        on_release: app.load_screen('WorkshopScheduleScreen', manager=app.navigation_screen.ids.nav_manager)
                     BButton
                         text: 'Conference Days'
+                        on_release: app.load_screen('ConferenceScheduleScreen', manager=app.navigation_screen.ids.nav_manager)
 ''')
