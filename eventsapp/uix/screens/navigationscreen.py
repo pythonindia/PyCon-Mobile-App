@@ -82,7 +82,7 @@ class LeftPanel(Factory.BoxLayout):
 class TopBar(Factory.BoxLayout):
 
     back_button_image = StringProperty('data/images/hamburger.png')
-    title = StringProperty('PyCon India 2017')
+    title = StringProperty('PyCon India 2018')
     navigate_back = BooleanProperty(False)
 
     def on_menu_press(self):
