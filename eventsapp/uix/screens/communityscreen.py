@@ -3,6 +3,8 @@ Community Screen:
 =============
 '''
 
+
+
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
