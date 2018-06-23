@@ -43,11 +43,15 @@ class WelcomeScreen(Screen):
                     padding: dp(45), dp(45)
                     ThemeButton:
                         size_hint: 1, .1
-                        text: 'Workshop & DevSprints'
+                        text: 'Workshop\n 5 Oct 2018'
                         on_release: root.on_press_schedule('workshop')
+                     ThemeButton:
+                        size_hint: 1, .1
+                        text: 'DevSprints\n 8-9 Oct 2018'
+                        on_release: root.on_press_schedule('DevSprints')
                     ThemeButton:
                         size_hint: 1, .1
-                        text: 'Conference Days'
+                        text: 'Conference Days\n 6-7 Oct 2018'
                         on_release: root.on_press_schedule('conference')
     ''')
 
