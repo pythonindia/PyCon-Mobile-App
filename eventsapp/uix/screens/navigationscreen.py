@@ -58,7 +58,6 @@ class LeftPanel(Factory.BoxLayout):
             pos: self.pos
     Image
         id: img_back
-        source: "data/images/background.png"
         allow_stretch: True
         keep_ratio: False
         size_hint: 1, None
