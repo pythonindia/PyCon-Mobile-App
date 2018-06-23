@@ -3,8 +3,6 @@ Community Screen:
 =============
 '''
 
-
-
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
@@ -45,7 +43,7 @@ class CommunityScreen(Screen):
                     orientation: 'vertical'
                     spacing: dp(20)
                     size_hint_y: None
-                    size: self.size[0], dp(150)
+                    size: self.size[0], dp(130)
                     id: social_icons
                     padding: dp(10), dp(15)
     ''')

@@ -32,7 +32,7 @@ class AboutScreen(Screen):
                 Label:
                     text: '2nd-3rd Nov, Workshop/Devsprints \\n 7th-8th Nov, Conference Days'
                     text_size: self.size
-                    halign: 'left'
+                    halign: 'center'
                     valign: 'center'
                     font_size: dp(24)
                     bold: True
