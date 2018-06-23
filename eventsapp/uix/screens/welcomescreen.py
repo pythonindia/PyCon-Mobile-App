@@ -43,7 +43,7 @@ class WelcomeScreen(Screen):
                     padding: dp(45), dp(45)
                     ThemeButton:
                         size_hint: 1, .1
-                        text: 'Workshop & DevSprints'
+                        text: 'Workshops'
                         on_release: root.on_press_schedule('workshop')
                     ThemeButton:
                         size_hint: 1, .1

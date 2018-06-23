@@ -43,7 +43,7 @@ class AboutScreen(Screen):
                     text_size: self.size
                     halign: 'left'
                     valign: 'top'
-                    font_size: dp(22)
+                    font_size: dp(12)
                     color: 0, 0, 0, 1
     ''')
 
