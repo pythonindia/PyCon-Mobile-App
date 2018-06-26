@@ -1,0 +1,14 @@
+buildozer==0.33
+certifi==2017.7.27.1
+chardet==3.0.4
+Cython==0.25.2
+docutils==0.14
+idna==2.6
+Kivy==1.10.0
+Kivy-Garden==0.1.4
+pexpect==4.2.1
+ptyprocess==0.5.2
+Pygments==2.2.0
+requests==2.18.4
+urllib3==1.22
+virtualenv==15.1.0
