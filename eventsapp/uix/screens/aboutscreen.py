@@ -30,7 +30,7 @@ class AboutScreen(Screen):
                     id: website
                     social_image: 'data/images/social/website.png'
                 Label:
-                    text: '2nd-3rd Nov, Workshop/Devsprints \\n 4th-5th Nov, Conference Days'
+                    text: '2nd-3rd Nov, Workshop/Devsprints \\n 7th-8th Nov, Conference Days'
                     text_size: self.size
                     halign: 'center'
                     valign: 'center'
