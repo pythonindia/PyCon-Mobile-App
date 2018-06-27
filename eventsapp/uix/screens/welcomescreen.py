@@ -7,6 +7,8 @@ from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from kivy.app import App
 from uix.buttons import ThemeButton
+import json
+
 
 
 class WelcomeScreen(Screen):
@@ -17,7 +19,7 @@ class WelcomeScreen(Screen):
     BoxLayout
         orientation: 'vertical'
         TopBar
-            title: 'PyCon India 2018'
+            title: root.event_name_details()
         RelativeLayout
             Image
                 source: 'data/images/navback.png'
@@ -30,7 +32,7 @@ class WelcomeScreen(Screen):
             BoxLayout
                 orientation: 'vertical'
                 Label
-                    text: 'Welcome to\\n PyCon India 2018'
+                    text: 'Welcome to\\n'+ root.event_name_details()
                     text_size: self.size
                     valign: 'center'
                     halign: 'center'
@@ -50,6 +52,15 @@ class WelcomeScreen(Screen):
                         text: 'Conference Days'
                         on_release: root.on_press_schedule('conference')
     ''')
+
+    def event_name_details(self):
+    #this part of program loads event name from event.json
+        with open('eventsapp/data/jsonfiles/event.json') as data_file:
+            data = json.load(data_file)
+        event_items = data.get("0.0.2")
+        for items in event_items:
+            event_name=items['name']
+        return event_name
 
     def on_press_schedule(self, scheduletype):
         app = App.get_running_app()

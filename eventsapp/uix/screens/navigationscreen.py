@@ -78,11 +78,17 @@ class LeftPanel(Factory.BoxLayout):
 
     ''')
 
-
 class TopBar(Factory.BoxLayout):
 
+    #this part of code loads data from event.json for event title
+    with open('eventsapp/data/jsonfiles/event.json') as data_file:
+        data = json.load(data_file)
+    event_items = data.get("0.0.2")
+    for items in event_items:
+        event_name=items['name']
+
     back_button_image = StringProperty('data/images/hamburger.png')
-    title = StringProperty('PyCon India 2017')
+    title = StringProperty(event_name)
     navigate_back = BooleanProperty(False)
 
     def on_menu_press(self):
