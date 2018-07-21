@@ -29,15 +29,18 @@ class CommunityScreen(Screen):
                     size_hint_y: None
                     height: self.parent.height/4
                     source: 'data/images/logo.png'
+              
                 Label:
                     id: about
                     text: ''
-                    size_hint_y: None
-                    height: self.parent.height/4
+                    size_hint_y:1
+                    height: self.parent.height/2
                     text_size: self.size
+
                     halign: 'center'
-                    valign: 'center'
-                    font_size: dp(20)
+                    valign: 'top'
+
+                    font_size: dp(12)
                     color: 0, 0, 0, 1
                 BoxLayout:
                     orientation: 'vertical'
