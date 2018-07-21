@@ -63,10 +63,10 @@ class LeftPanel(Factory.BoxLayout):
         allow_stretch: True
         keep_ratio: False
         size_hint: 1, None
-        height: self.width/2
+        height: self.width - self.width/3
         Image
             source: 'data/images/logo.png'
-            size: img_back.width, img_back.height/3.
+            size: img_back.width, img_back.height
             center: img_back.center
 
     RelativeLayout
@@ -125,7 +125,7 @@ class NavigationScreen(Screen):
 
     Builder.load_string('''
 <NavButton>
-    padding: dp(6)
+    padding: dp(4)
     spacing: dp(10)
     on_release:
         app.navigation_screen.ids.drawer.toggle_state()
