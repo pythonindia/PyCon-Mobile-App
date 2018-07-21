@@ -35,7 +35,7 @@ from kivy.properties import (ObjectProperty, NumericProperty, OptionProperty,
 from kivy.factory import Factory
 from kivy.lang import Builder
 from kivy.app import App
-import webbrowser
+
 
 from uix.buttons import ImageButton
 
@@ -130,8 +130,13 @@ class NavigationScreen(Screen):
 
     Builder.load_string('''
 <NavButton>
+<<<<<<< HEAD
     padding: dp(5)
     spacing: dp(2)
+=======
+    padding: dp(6)
+    spacing: dp(10)
+>>>>>>> upstream/master
     on_release:
         app.navigation_screen.ids.drawer.toggle_state()
         app.load_screen(root.navigate_to,

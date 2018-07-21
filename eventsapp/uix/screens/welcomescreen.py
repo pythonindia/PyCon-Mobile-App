@@ -2,12 +2,13 @@
 Welcome Screen
 ==============
 '''
+from tkinter import Button
 
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from kivy.app import App
 from uix.buttons import ThemeButton
-
+import webbrowser
 
 
 class WelcomeScreen(Screen):
@@ -33,7 +34,7 @@ class WelcomeScreen(Screen):
             BoxLayout
                 orientation: 'vertical'
                 Label
-                    text: 'Welcome to\\n PyCon India 2018'
+                    text: 'Welcome to \\n PyCon India 2018'
                     text_size: self.size
                     valign: 'center'
                     halign: 'center'
@@ -58,4 +59,5 @@ class WelcomeScreen(Screen):
         app = App.get_running_app()
         app.scheduledatatype = scheduletype
         manager = app.navigation_screen.ids.nav_manager
-        app.load_screen('ScheduleScreen', manager=manager)
+        pp.load_screen('ScheduleScreen', manager=manager)
+
