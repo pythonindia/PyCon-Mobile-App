@@ -71,6 +71,8 @@ class EventsApp(App):
         # load screen modules dynamically
         # for example load_screen('LoginScreen')
         # will look for uix/screens/loginscreen
+
+
         # load LoginScreen
         module_path = screen.lower()
         if not hasattr(self, module_path):
