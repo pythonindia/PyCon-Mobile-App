@@ -25,31 +25,26 @@ class WelcomeScreen(Screen):
         orientation: 'vertical'
         TopBar
             title: 'PyCon India 2018'
-        RelativeLayout 
+            halign: 'middle'
+
+        RelativeLayout
             Image
                 source: 'data/images/logocopy.png'
                 allow_stretch: False
                 keep_ratio: True
-            BoxLayout
-                orientation: 'vertical'
-                Label
-                    text: 'Welcome to\\n PyCon India 2018'
-                    text_size: self.size
-                    valign: 'center'
-                    halign: 'center'
-                    font_size: dp(22)
-                    color: 1,1,1,0
-                    bold: True
+
                 BoxLayout
                     orientation: 'vertical'
                     spacing: dp(45)
                     padding: dp(45), dp(45)
                     ThemeButton:
-                        size_hint: 1, .1
+                        size_hint: None, None
+                        size: 300, 60
                         text: 'Workshop & DevSprints'
                         on_release: root.on_press_schedule('workshop')
                     ThemeButton:
-                        size_hint: 1, .1
+                        size_hint: None, None
+                        size: 300, 60
                         text: 'Conference Days'
                         on_release: root.on_press_schedule('conference')
     ''')
