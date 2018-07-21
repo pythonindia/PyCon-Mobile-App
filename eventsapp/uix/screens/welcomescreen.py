@@ -1,4 +1,4 @@
-'''
+﻿'''
 Welcome Screen
 ==============
 '''
@@ -33,12 +33,12 @@ class WelcomeScreen(Screen):
             BoxLayout
                 orientation: 'vertical'
                 Label
-                    text: 'Welcome to\\n PyCon India 2018'
+                    text: ''
                     text_size: self.size
                     valign: 'center'
                     halign: 'center'
                     font_size: dp(22)
-                    color: 1,1,1,0
+                    color: 255,1,1,0
                     bold: True
                 BoxLayout
                     orientation: 'vertical'
