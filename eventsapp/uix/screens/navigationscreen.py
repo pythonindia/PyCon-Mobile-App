@@ -36,6 +36,7 @@ from kivy.factory import Factory
 from kivy.lang import Builder
 from kivy.app import App
 
+
 from uix.buttons import ImageButton
 
 import json
@@ -62,15 +63,17 @@ class LeftPanel(Factory.BoxLayout):
         source: "data/images/background.png"
         allow_stretch: True
         keep_ratio: False
-        size_hint: 1, None
-        height: self.width/2
+        size_hint: 1, 1
+        height: self.width/3
+        
         Image
             source: 'data/images/logo.png'
-            size: img_back.width, img_back.height/3.
+            size: img_back.width, img_back.height
             center: img_back.center
-
+            
+            
     RelativeLayout
-        size_hint: 1, 1
+        size_hint: 1,1
         BoxLayout
             id: menu_buttons_container
             size_hint: 1, .8
@@ -94,6 +97,8 @@ class TopBar(Factory.BoxLayout):
             manager.current = 'ScheduleScreen'
         else:
             app.navigationdrawer.toggle_state()
+
+
 
 
     Builder.load_string('''
@@ -125,8 +130,13 @@ class NavigationScreen(Screen):
 
     Builder.load_string('''
 <NavButton>
+<<<<<<< HEAD
+    padding: dp(5)
+    spacing: dp(2)
+=======
     padding: dp(6)
     spacing: dp(10)
+>>>>>>> upstream/master
     on_release:
         app.navigation_screen.ids.drawer.toggle_state()
         app.load_screen(root.navigate_to,
@@ -140,7 +150,7 @@ class NavigationScreen(Screen):
         text_size: self.size
         halign: 'left'
         valign: 'center'
-        font_size: dp(18)
+        font_size: dp(12)
         color: 0, 0, 0, 1
 
 
