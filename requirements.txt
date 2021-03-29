@@ -11,7 +11,7 @@ kivy.deps.glew==0.1.9
 kivy.deps.sdl2==0.1.17
 pexpect==4.6.0
 ptyprocess==0.6.0
-Pygments==2.2.0
+Pygments==2.7.4
 pypiwin32==223
 pywin32==223
 requests==2.20.0
