@@ -13,7 +13,7 @@ pexpect==4.6.0
 ptyprocess==0.6.0
 Pygments==2.2.0
 pypiwin32==223
-pywin32==223
+pywin32==301
 requests==2.20.0
 urllib3==1.24.2
 virtualenv==16.0.0
