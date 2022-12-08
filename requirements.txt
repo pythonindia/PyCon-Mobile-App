@@ -1,5 +1,5 @@
 buildozer==0.34
-certifi==2018.4.16
+certifi==2022.12.7
 chardet==3.0.4
 Cython==0.28.3
 docutils==0.14
