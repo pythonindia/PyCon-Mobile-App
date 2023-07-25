@@ -1,5 +1,5 @@
 buildozer==1.5.0
-certifi==2022.12.7
+certifi==2023.7.22
 chardet==5.1.0
 charset-normalizer==3.1.0
 Cython==0.29.34
